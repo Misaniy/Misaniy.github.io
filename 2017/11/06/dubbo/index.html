@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.6 -->
+    <script>
+        window.materialVersion = "1.5.6"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+
+
+
+
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            Dubbo | 
+        
+        WarmCute&#39;s Blog
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.png">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" itemprop="description" content>
+    <meta name="keywords" content>
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="WarmCute&#39;s Blog">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2017/11/06/dubbo/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="WarmCute&#39;s Blog">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://yoursite.com/2017/11/06/dubbo/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Dubbo | WarmCute&#39;s Blog">
+    <meta property="og:image" content="/img/favicon.png">
+    <meta property="og:description" content>
+    
+
+    
+        <meta property="article:published_time" content="Mon Nov 06 2017 11:55:53 GMT+0800">
+        <meta property="article:modified_time" content="Sun May 26 2019 14:43:21 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://yoursite.com/2017/11/06/dubbo/index.html">
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/2017/11/06/dubbo/index.html",
+    "headline": "Dubbo",
+    "datePublished": "Mon Nov 06 2017 11:55:53 GMT+0800",
+    "dateModified": "Sun May 26 2019 14:43:21 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "WarmCute",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "隐约雷鸣 阴霾天空,但盼风雨来 能留你在此"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "WarmCute&#39;s Blog",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": "",
+    "description": "",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn" class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#系统通信"><span class="post-toc-number">1.</span> <span class="post-toc-text">系统通信</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何实现远程通信"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">如何实现远程通信</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#规模架构"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">规模架构</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Dubbo"><span class="post-toc-number">2.</span> <span class="post-toc-text">Dubbo</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#节点角色说明"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">节点角色说明</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#调用关系说明"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">调用关系说明</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#协议说明"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">协议说明</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#dubbo协议"><span class="post-toc-number">2.3.1.</span> <span class="post-toc-text">dubbo协议</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#rmi协议"><span class="post-toc-number">2.3.2.</span> <span class="post-toc-text">rmi协议</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#hession协议"><span class="post-toc-number">2.3.3.</span> <span class="post-toc-text">hession协议</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#容错机制"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">容错机制</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#机制"><span class="post-toc-number">2.4.1.</span> <span class="post-toc-text">机制</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#原理"><span class="post-toc-number">2.4.2.</span> <span class="post-toc-text">原理</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#分类"><span class="post-toc-number">2.4.3.</span> <span class="post-toc-text">分类</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#配置"><span class="post-toc-number">2.4.4.</span> <span class="post-toc-text">配置</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#负载均衡"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">负载均衡</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#机制-1"><span class="post-toc-number">2.5.1.</span> <span class="post-toc-text">机制</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#策略"><span class="post-toc-number">2.5.2.</span> <span class="post-toc-text">策略</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#配置-1"><span class="post-toc-number">2.5.3.</span> <span class="post-toc-text">配置</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#使用方法"><span class="post-toc-number">3.</span> <span class="post-toc-text">使用方法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Spring配置"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">Spring配置</span></a></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                Dubbo
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar">
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>WarmCute</strong>
+        <span>11月 06, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Dubbo&url=http://yoursite.com/2017/11/06/dubbo/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Dubbo&url=http://yoursite.com/2017/11/06/dubbo/index.html&via=WarmCute" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/11/06/dubbo/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/2017/11/06/dubbo/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>Dubbo是阿里的开源分布式服务架构，可通过高性能的RPC实现服务的输出和输入功能。</p>
+<h2 id="系统通信"><a href="#系统通信" class="headerlink" title="系统通信"></a>系统通信</h2><h3 id="如何实现远程通信"><a href="#如何实现远程通信" class="headerlink" title="如何实现远程通信"></a>如何实现远程通信</h3><ol>
+<li>WebService: 效率不高基于soap协议</li>
+<li>使用RestFull形式的服务: http+json。如果服务太多，服务之间调用关系混杂，需要治疗服务</li>
+<li>dubbo: 使用rpc协议进行远程调用，直接使用socket通信。传输效率高，并且可以统计出系统之间的调用关心，调用次数。</li>
+</ol>
+<h3 id="规模架构"><a href="#规模架构" class="headerlink" title="规模架构"></a>规模架构</h3><table>
+<thead>
+<tr>
+<th>Framework</th>
+<th>Architecture</th>
+<th>Cluster</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ORM</td>
+<td>All in One</td>
+<td>1~10</td>
+</tr>
+<tr>
+<td>MVC</td>
+<td>Vertical Application</td>
+<td>10~1000</td>
+</tr>
+<tr>
+<td>RPC</td>
+<td>Distributed Service</td>
+<td>1000~10000</td>
+</tr>
+<tr>
+<td>SOA</td>
+<td>Elastic Computing</td>
+<td>10000+</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>单一应用架构<ul>
+<li>当网站流量很小时，只需一个应用，将所有功能都部署在一起，以减少部署节点和成本。</li>
+<li>此时，用于简化增删改差工作量的<strong>数据访问框架(ORM)</strong>是关键。</li>
+</ul>
+</li>
+<li>垂直应用架构<ul>
+<li>当访问量逐渐增大，单一应用增加极其带来的加速度越来越小，将应用拆成无不想干的几个应用，以提升效率</li>
+<li>此时，用于加速前端页面开发的<strong>Web框架(MVC)</strong>是关键</li>
+</ul>
+</li>
+<li>分布式服务架构<ul>
+<li>当垂直应用越来越多，应用之间交互不可避免，将核心业务抽取出来，作为独立的服务，逐渐形成稳定的服务中心，使前端应用能更快速的响应多变的市场需求。</li>
+<li>此时，用于提高业务服用及整合的<strong>分布式服务架构(RPC)</strong>是关键。</li>
+</ul>
+</li>
+<li>流动计算架构<ul>
+<li>当服务越来越多，容量的评估，小服务资源的浪费等问题逐渐显现，此时需增加一个调度中心基于访问压力实时管理集群容量，提高集群利用率。</li>
+<li>此时，用于提高机器利用率的<strong>资源调度和治理中心(SOA)</strong>是关键。</li>
+</ul>
+</li>
+</ul>
+<h2 id="Dubbo"><a href="#Dubbo" class="headerlink" title="Dubbo"></a>Dubbo</h2><h3 id="节点角色说明"><a href="#节点角色说明" class="headerlink" title="节点角色说明"></a>节点角色说明</h3><ul>
+<li>Provider暴露服务的服务提供方</li>
+<li>Consumer调用服务的服务消费方</li>
+<li>Registry服务注册与发现的注册中心</li>
+<li>Monitor统计服务的调用次数和调用时间的监控中心</li>
+<li>Container服务运行容器</li>
+</ul>
+<h3 id="调用关系说明"><a href="#调用关系说明" class="headerlink" title="调用关系说明"></a>调用关系说明</h3><ul>
+<li>0.服务容器(Container)负责启动、加载、运行服务提供方(Provider)</li>
+<li>1.服务提供方(Provider)在启动时，向注册中心(Registry)注册自己提供的服务。</li>
+<li>2.服务消费方(Consumer)在启动时，向注册中心(Registry)订阅自己所需的服务。</li>
+<li>3.注册中心(Registry)返回服务提供方(Provider)地址列表给消费者，如果有变化，注册中心将基于长连接推送变更数据给消费方(Consumer).</li>
+<li>4.服务消费方(Consumer)，从提供者地址列表中，基于软负载均衡算法，选一台提供方(Provider)进行调用，如果调用失败，再选另一台调用.</li>
+<li>5.服务消费者(Consumer)和提供方(Provider)，在内存中累计调用次数和调用时间，定时每分钟发送一次统计数据到监控中心(Monitor)</li>
+</ul>
+<h3 id="协议说明"><a href="#协议说明" class="headerlink" title="协议说明"></a>协议说明</h3><h4 id="dubbo协议"><a href="#dubbo协议" class="headerlink" title="dubbo协议"></a>dubbo协议</h4><ul>
+<li>采用NIO复用单一长连接，并使用线程池并发处理请求，减少握手和并发处理请求，性能较好（建议使用）<ul>
+<li>为什么用异步长连接：因为消费者多而提供者少，采用hession会压垮，通过长连接，减少握手。</li>
+<li>为什么消费者多而提供者少：根据测试，每条连接最大为7M，千兆网卡为128M，理论上一个服务提供者需要20个消费者才能压满。</li>
+</ul>
+</li>
+<li>在大文件传输得时候，单一链接会成为瓶颈<ul>
+<li>假设每次请求数据包500kb,假设网络为千兆网卡，就是128MB，每条连接最大7MB，单个服务提供者每秒处理事务为（128m/500k）=262.单个消费者调用单个服务提供者的每秒处理事务最大为7mb/500=14。如果能接收，可以使用。</li>
+</ul>
+</li>
+</ul>
+<h4 id="rmi协议"><a href="#rmi协议" class="headerlink" title="rmi协议"></a>rmi协议</h4><ul>
+<li>可与原生RMI互操作，基于TCP协议，堵塞式短链接和JDK标准序列化方式</li>
+<li>偶尔会连接失败，需要重建存根</li>
+</ul>
+<h4 id="hession协议"><a href="#hession协议" class="headerlink" title="hession协议"></a>hession协议</h4><ul>
+<li>可与原生hession协议互操作，基于http协议</li>
+<li>需要hession.jar的支持，http短链接的开销比较大</li>
+</ul>
+<h3 id="容错机制"><a href="#容错机制" class="headerlink" title="容错机制"></a>容错机制</h3><h4 id="机制"><a href="#机制" class="headerlink" title="机制"></a>机制</h4><p>在集群调用失败时，Dubbo提供了多种容错方案，缺省为failover重试。<br>可以自行拓展集群容错策略</p>
+<h4 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h4><ul>
+<li>Invoker是Provider的一个可调用Service的抽象，Invoker封装了Provider地址及Service接口信息</li>
+<li>Directory代表多个Invoker，可以把它看作List，但与Invoker不同的是，它的值可能是动态变化的，比如注册中心推送变更</li>
+<li>Cluster将Directory中的多个Invoker伪装成一个Invoker，对上层透明，伪装过程包含了容错逻辑，调用失败后，重试另一个</li>
+<li>Router负责从多个Invoker中按路由规则选出子集，比如读写分离，应用隔离等</li>
+<li>LoadBalance负责从多个Invoker中选出具体的一个用于本次调用，选的过程包含了负载均衡算法，调用失败后，需要重选</li>
+</ul>
+<h4 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h4><ul>
+<li>Failover<ul>
+<li>失败自动切换，若失败，重试其他服务器。可通过retries=”2”来设置重试次数（不含第一次）<br><code>&lt;dubbo:method name=&quot;findFoo&quot; retries=&quot;2&quot; /&gt;</code></li>
+</ul>
+</li>
+<li>Failfast<ul>
+<li>快速失败，只发起一次调用，失败立即报错。通常用于非幂等性的写操作，比如新增记录</li>
+</ul>
+</li>
+<li>Failsafe<ul>
+<li>失败安全，出现异常时，直接忽略。通常用于写入审计日志等操作。</li>
+</ul>
+</li>
+<li>Failback<ul>
+<li>失败自动回复，后台记录失败请求，定时重发。通常用于消息通知</li>
+</ul>
+</li>
+<li>Forking<ul>
+<li>并行调用多个服务器，只要一个成功即返回。通常用于实时性要求较高的读操作。但需要浪费更多服务资源。课通过forks=”2”来设置最大并行数。</li>
+</ul>
+</li>
+<li>Broadcast<ul>
+<li>广播调用所有提供者，逐个调用，任意一台报错则报错。通常用于通知所有提供者更新缓存或日志等本地资源信息。</li>
+</ul>
+</li>
+</ul>
+<h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><ul>
+<li>提供方<br><code>&lt;dubbo:service cluster=&quot;failsafe&quot; /&gt;</code></li>
+<li>消费方<br><code>&lt;dubbo:reference cluster=&quot;failsafe&quot; /&gt;</code></li>
+</ul>
+<h3 id="负载均衡"><a href="#负载均衡" class="headerlink" title="负载均衡"></a>负载均衡</h3><h4 id="机制-1"><a href="#机制-1" class="headerlink" title="机制"></a>机制</h4><p>在集群负载均衡时，Dubbo提供了多种均衡策略，缺省为random随机调用<br>可以自行拓展负载均衡策略</p>
+<h4 id="策略"><a href="#策略" class="headerlink" title="策略"></a>策略</h4><ul>
+<li>Random LoadBalance。随机，按权重设置随机概率<ul>
+<li>在一个截面上碰撞的概率高，但调用量越大分布越均匀，而且按概率使用权重后也比较均匀，有利于动态调整提供者权重</li>
+</ul>
+</li>
+<li>RoundRobin LoadBalance。轮循，按公钥后的权重设置轮循比率<ul>
+<li>存在慢的提供者累计请求的问题，比如：第二台机器很慢，但没挂，当请求遇到第二台时就卡在那，久而久之，所有请求都卡在调到第二台上。</li>
+<li>解决办法：结合权重，把第二台的权重设置低一点</li>
+</ul>
+</li>
+<li>LeastActive LoadBalance。最少活跃调用数，相同活跃数的随机，活跃数指调用前后计数差<ul>
+<li>使慢的提供者收到更少请求，因为越慢的提供者的调用前后技术差会越大。</li>
+</ul>
+</li>
+<li>ConsistentHash LoadBalance。一致性Hash，相同参数的请求总是发到同意提供者<ul>
+<li>当某一台提供者挂时，原本发往该提供者的请求，基于虚拟节点，平摊到其他提供者，不会引起剧烈变动</li>
+<li>缺省值对第一个参数Hash，如果要修改，请配置<code>&lt;dubbo:parmeter key=&quot;hash.arguments&quot; value=&quot;0.1&quot;/&gt;</code></li>
+<li>缺省用160份虚拟节点，如果要修改，请配置<code>&lt;dubbo:parmeter key=&quot;hash.nodes&quot; value=&quot;320&quot;/&gt;</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="配置-1"><a href="#配置-1" class="headerlink" title="配置"></a>配置</h4><ul>
+<li>服务端服务级别<br><code>&lt;dubbo:service interface=&quot;...&quot; loadbalance=&quot;roundrobin&quot; /&gt;</code></li>
+<li>客户端服务级别<br><code>&lt;dubbo:reference interface=&quot;...&quot; loadbalance=&quot;roundrobin&quot; /&gt;</code></li>
+<li><p>服务端方法级别</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;dubbo:service interface=&quot;...&quot;&gt;</span><br><span class="line">	&lt;dubbo:method name=&quot;...&quot; loadbalance=&quot;roundrobin&quot; / &gt;</span><br><span class="line">&lt;/dubbo:service&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>客户端方法级别</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;dubbo:reference interface=&quot;...&quot;&gt;</span><br><span class="line">	&lt;dubbo:method name=&quot;...&quot; loadbalance=&quot;roundrobin&quot; /&gt;</span><br><span class="line">&lt;/dubbo:reference&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><h3 id="Spring配置"><a href="#Spring配置" class="headerlink" title="Spring配置"></a>Spring配置</h3><p>Dubbo采用全Spring配置方式，透明化接入应用，对应用没有任何API侵入，只需用Spring加载Dubbo的配置即可，Dubbo基于Spring的Schema拓展进行加载。</p>
+<ul>
+<li><p>单一工程中Spring的配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;bean id=&quot;xxxService&quot; class=&quot;com.xxxServiceImpl&quot; /&gt;</span><br><span class="line">&lt;bean id=&quot;xxxAction&quot; class=&quot;com.xxx.xxxAction&quot;&gt;</span><br><span class="line">	&lt;property name=&quot;xxxService&quot; ref=&quot;xxxService&quot;&gt;</span><br><span class="line">&lt;/bean&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>远程服务<br>将上述local.xml配置拆分成两份，将服务定义部分放在服务提供方remote-provier.xml,将服务引用部分放在服务消费方remote-consumer.xml<br>并在provider增加暴露服务配置<a href="dubbo:service" target="_blank" rel="noopener">dubbo:service</a>,在consumer增加引用服务配置<a href="dubbo:reference" target="_blank" rel="noopener">dubbo:reference</a></p>
+<ul>
+<li><p>发布服务</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 和本地服务一样实现远程服务 --&gt;</span><br><span class="line">&lt;bean id = &quot;xxxService&quot; class = &quot;com.xxx.xxxServiceImpl&quot;/&gt;</span><br><span class="line">&lt;!-- 增加暴露远程服务配置 --&gt;</span><br><span class="line">&lt;dubbo:service interface=&quot;com.xxx.xxxService&quot; ref=&quot;xxxService&quot;&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>调用服务</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">	&lt;!-- 增加引用远程服务配置 --&gt;</span><br><span class="line">	&lt;dubbo:reference id =&quot;xxxService&quot; interface=&quot;com.xxx.xxxService&quot;/&gt;</span><br><span class="line">	&lt;!-- 和本地服务一样使用远程服务&gt;</span><br><span class="line">	&lt;bean id =&quot;xxxAction&quot; class=&quot;com.xxx.xxxAction&quot;&gt;</span><br><span class="line">		&lt;property name=&quot;xxxService&quot; ref=&quot;xxxService&quot;&gt;</span><br><span class="line">	&lt;/bean&gt;</span><br><span class="line">	``` </span><br><span class="line"></span><br><span class="line">### 注册中心</span><br><span class="line">注册中心负责服务地址的注册与查找，相当于目录服务，服务提供者和消费者只在启动时与注册中心交互，注册中心不转发请求，压力较小，使用dubbo2.3.3以上版本，建议使用zookeeper注册中心</span><br><span class="line">zookeeper是Apache Hadoop的子项目，是一个属性的目录服务，支持变更推送，适合作为Dubbo服务的注册中心</span><br><span class="line"></span><br><span class="line">#### Zookeeper安装</span><br><span class="line"></span><br><span class="line">- 安装jdk</span><br><span class="line">- 上传并解压zookeeper</span><br><span class="line">- 将conf文件夹下的zoo-sample.cfg复制一份，改名位zoo.cfg</span><br><span class="line">- 修改zoo.cfg的dataDir属性，指定zookeeper的真实目录</span><br><span class="line">- 修改zoo.cfg的clientport属性，指定该服务器的zookeeper端口</span><br><span class="line">- 启动zookeeper:zookeeper/bin/zkServer.sh start</span><br><span class="line">- 关闭zookeeper:zookeeper/bin/zkServer.sh stop</span><br><span class="line">- 查看zookeeper:zookeeper/bin/zkServer.sh status</span><br><span class="line"></span><br><span class="line">### 监控中心</span><br><span class="line"></span><br><span class="line">- 下载dubbo https://github.com/alibaba/dubbo</span><br><span class="line">- 将dubbo-admin打包`mvn package -Dmaven.test.skip=true`</span><br><span class="line">- 将war包复制到tomcat/webapps/中。修改/WEB-INF/dubbo.properties。包括地址和用户密码</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## 面试常见问题</span><br><span class="line"></span><br><span class="line">### 服务器挂了怎么办</span><br><span class="line"></span><br><span class="line">- 注册中心挂了</span><br><span class="line">	- 不影响服务使用，但不能重新发布服务</span><br><span class="line">- dubbo挂了</span><br><span class="line">	- 重启</span><br><span class="line"></span><br><span class="line">### 使用dubbo存在的问题</span><br><span class="line"></span><br><span class="line">1. 增加提供服务版本号和消费消费版本号</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<p>&lt;dubbo:service interface=”com.xxx.xxxService” ref=”xxxService” version=”1.0” /&gt;<br>&lt;dubbo:reference id=”xxxService” interface=”com.xxx.xxxService” version=”1.0”/&gt;<br><code>`</code></p>
+<ol start="2">
+<li>服务超时<ul>
+<li>服务请求超时→网络抖动：系统分析师的问题</li>
+<li>调用的版本不对</li>
+<li>监控中心人为禁止</li>
+</ul>
+</li>
+<li>服务保护<br>服务保护的原则上是避免发生类似雪崩效应，尽量将异常控制在服务周围，不要扩散开。说到雪崩效应，还得提下dubbo自身的重试机制。默认3此，当失败时会进行重试，这样在某个时间点出现性能问题，然后调用房再连续重复调用。很容易引起雪崩，建议的话还是根据业务情况规划号如何进行异常处理，何时进行重试。服务保护的话，考虑服务的dubbo线程池类型（fix线程池的话考虑线程池大小）、数据库连接池、dubbo连接数限制是否都符合</li>
+<li>注册中心的分组group和服务的不同实现group<br>这两个东西完全不同的概念，使用的时候不要弄混了。registry上可以配置group，用于区分不同分组的注册中心，比如在同一个注册中心下，有一部分注册信息是要给开发环境用的，有一部分注册信息是要给测试环境用的，可以分别用不痛的group区分开，目前对这个理解还不透彻，大致就是用于区分不同环境。service和reference上也可以配置group，这个用于区分同一个接口的不同实现，只有在reference上指定与service相同的group才会被发现</li>
+<li>dubbo的序列化<br>dubbo远程调用服务原理是通过序列化、反序列化实现的<br>dubbo是采用Hessian（比jdk自带的反序列化高效）进行反序列化的，该反序列化创建对象时，会取最少的构造方法创建对象，构造方法参数设置默认值，基本类型设置为响应基本类型的默认值，不是基本类型设置为null。通过新增午餐构造方法解决了问题</li>
+</ol>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2017/11/08/redis/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/10/28/SpringWebMvc/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="WarmCute's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        youremail@email.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="#" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2019/04/">四月 2019<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/10/">十月 2017<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/09/">九月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/04/">四月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">三月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">一月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">十一月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">九月 2016<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">八月 2016<span class="sidebar_archives-count">1</span></a>
+            </li></ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/JAVA基础/">JAVA基础<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/SQL/">SQL<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Spring/">Spring<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Spring-Boot-2-1-X/">Spring Boot 2.1.X<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/分享/">分享<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/基础/">基础<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/数据库/">数据库<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/框架/">框架<span class="sidebar_archives-count">12</span></a></li><li><a class="sidebar_archives-link" href="/categories/检索/">检索<span class="sidebar_archives-count">1</span></a>
+            </li></ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material" class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/twitter" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/facebook" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+        <a href="https://www.google.com/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-gplus">
+                <span class="visuallyhidden">Google Plus</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+
+    <!-- V2EX -->
+    
+
+    <!-- Segmentfault -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;WarmCute's Blog
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 0000;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
