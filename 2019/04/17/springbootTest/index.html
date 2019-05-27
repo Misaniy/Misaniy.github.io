@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.6 -->
+    <script>
+        window.materialVersion = "1.5.6"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+
+
+
+
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            Spring Boot 之 单元测试 | 
+        
+        WarmCute&#39;s Blog
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.png">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" itemprop="description" content>
+    <meta name="keywords" content>
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="WarmCute&#39;s Blog">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2019/04/17/springbootTest/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="WarmCute&#39;s Blog">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://yoursite.com/2019/04/17/springbootTest/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Spring Boot 之 单元测试 | WarmCute&#39;s Blog">
+    <meta property="og:image" content="/img/favicon.png">
+    <meta property="og:description" content>
+    
+
+    
+        <meta property="article:published_time" content="Wed Apr 17 2019 15:29:35 GMT+0800">
+        <meta property="article:modified_time" content="Sun May 26 2019 22:41:32 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://yoursite.com/2019/04/17/springbootTest/index.html">
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/2019/04/17/springbootTest/index.html",
+    "headline": "Spring Boot 之 单元测试",
+    "datePublished": "Wed Apr 17 2019 15:29:35 GMT+0800",
+    "dateModified": "Sun May 26 2019 22:41:32 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "WarmCute",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "WarmCute&#39;s Blog",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": "",
+    "description": "",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn" class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#简单实例"><span class="post-toc-number">1.</span> <span class="post-toc-text">简单实例</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#TestConfiguration"><span class="post-toc-number">2.</span> <span class="post-toc-text">@TestConfiguration</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#TestConfiguration-应用实例"><span class="post-toc-number">3.</span> <span class="post-toc-text">@TestConfiguration 应用实例</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#使用mock方式对controller进行单元测试（无需运行web服务）"><span class="post-toc-number">4.</span> <span class="post-toc-text">使用mock方式对controller进行单元测试（无需运行web服务）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#对随机端口进行单元测试"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">对随机端口进行单元测试</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#打开随机端口"><span class="post-toc-number">4.1.1.</span> <span class="post-toc-text">打开随机端口</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#编写测试类"><span class="post-toc-number">4.1.2.</span> <span class="post-toc-text">编写测试类</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#使用mock方式对controller进行单元测试（需运行web服务且-使用webflux）"><span class="post-toc-number">5.</span> <span class="post-toc-text">使用mock方式对controller进行单元测试（需运行web服务且 使用webflux）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#编写测试类-1"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">编写测试类</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#MockBean-对bean进行mock测试"><span class="post-toc-number">6.</span> <span class="post-toc-text">@MockBean 对bean进行mock测试</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#编写单元测试代码"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">编写单元测试代码</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#测试json-JsonTest"><span class="post-toc-number">7.</span> <span class="post-toc-text">测试json @JsonTest</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#有时候我们会自定义序列化风格，这里对-JsonComponent进行测试："><span class="post-toc-number">7.1.</span> <span class="post-toc-text">有时候我们会自定义序列化风格，这里对@JsonComponent进行测试：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#编写测试类-2"><span class="post-toc-number">7.2.</span> <span class="post-toc-text">编写测试类</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#TestPropertySource-对属性配置进行mock"><span class="post-toc-number">8.</span> <span class="post-toc-text">@TestPropertySource 对属性配置进行mock</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#使用spring提供的-PropertySource"><span class="post-toc-number">8.1.</span> <span class="post-toc-text">使用spring提供的@PropertySource</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#对springboot提供的类型安全的属性配置进行mock"><span class="post-toc-number">9.</span> <span class="post-toc-text">对springboot提供的类型安全的属性配置进行mock</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#为单元测试单独提供测试配置"><span class="post-toc-number">10.</span> <span class="post-toc-text">为单元测试单独提供测试配置</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#对AOP进行测试"><span class="post-toc-number">11.</span> <span class="post-toc-text">对AOP进行测试</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#引入AOP依赖"><span class="post-toc-number">11.1.</span> <span class="post-toc-text">引入AOP依赖</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#对AOP进行测试-1"><span class="post-toc-number">11.2.</span> <span class="post-toc-text">对AOP进行测试</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#另一种AOP测试"><span class="post-toc-number">12.</span> <span class="post-toc-text">另一种AOP测试</span></a></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                Spring Boot 之 单元测试
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar">
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>WarmCute</strong>
+        <span>4月 17, 2019</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Spring Boot 之 单元测试&url=http://yoursite.com/2019/04/17/springbootTest/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Spring Boot 之 单元测试&url=http://yoursite.com/2019/04/17/springbootTest/index.html&via=WarmCute" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/04/17/springbootTest/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/2019/04/17/springbootTest/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>一个Spring Boot application 是Spring ApplicationContext, 在单元测试时没有什么特殊的。<br>当你使用SpringApplication 时，外部属性，日志等其他功能会被默认装配</p>
+<p>springboot提供了@SpringBootTest注解来辅助我们进行测试。</p>
+<blockquote>
+<p>如果我们使用的是JUnit 4 ，那么需要添加@RunWith(SpringRunner.class)否则所有注解将会被忽略。<br>如果你使用的是JUnit5 ,那么在 SpringBootTest 上没有必要添加 @ExtendWith,因为@SpringBootTest已经添加了ExtendWith</p>
+</blockquote>
+<h2 id="简单实例"><a href="#简单实例" class="headerlink" title="简单实例"></a>简单实例</h2><p>记得先给IDEA安装JUnitGenerator V2.0 和Junit 插件</p>
+<ol>
+<li><p>引入test的starter依赖</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;</span><br><span class="line">    &lt;scope&gt;test&lt;/scope&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在src/test/java目录下创建SimpleTest.java：</p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">@RunWith(SpringRunner.class)</span><br><span class="line">@SpringBootTest(classes = &#123;BasicserviceApplication.class&#125;) // 指定启动类</span><br><span class="line">@Slf4j</span><br><span class="line">public class SimpleTest &#123;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private AppProps appProps;</span><br><span class="line">    @Autowired</span><br><span class="line">    private HelloController helloController;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 使用断言</span><br><span class="line">     */</span><br><span class="line">    @Test</span><br><span class="line">    public void test1()&#123;</span><br><span class="line">        log.info(&quot;test 1&quot;);</span><br><span class="line">        TestCase.assertEquals(1, 1);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Test</span><br><span class="line">    public void test2()&#123;</span><br><span class="line">        log.info(&quot;appProp = &quot;, appProps.toString());</span><br><span class="line">        log.info(&quot;helloController.getHello = &quot;, helloController.getHello());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Before</span><br><span class="line">    public void testBefore()&#123;</span><br><span class="line">        log.info(&quot;test Before&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @After</span><br><span class="line">    public void testAfter()&#123;</span><br><span class="line">        log.info(&quot;test After&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="TestConfiguration"><a href="#TestConfiguration" class="headerlink" title="@TestConfiguration"></a>@TestConfiguration</h2><p>@TestConfiguration是Spring Boot Test提供的一种工具，用它我们可以在一般的@Configuration之外补充测试专门用的Bean或者自定义的配置。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@Target(ElementType.TYPE)</span><br><span class="line">@Retention(RetentionPolicy.RUNTIME)</span><br><span class="line">@Documented</span><br><span class="line">@Configuration</span><br><span class="line">@TestComponent</span><br><span class="line">public @interface TestConfiguration &#123;</span><br><span class="line">//...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>@TestComponent 用于声明专门用于测试的bean , 他不应该被自动扫描到。也就是说如果你使用@ComponentScan来扫描bean，那么需要将其排除在外：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@ComponentScan(excludeFilters = &#123;</span><br><span class="line">  @Filter(type = FilterType.CUSTOM, classes = TypeExcludeFilter.class),</span><br><span class="line">  ...&#125;)</span><br></pre></td></tr></table></figure>
+<p>由于@SpringBootApplication已经添加有排除TypeExcludeFilter的功能，固使用@SpringBootApplication时不会加载@TestComponent声明的bean:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">@Target(ElementType.TYPE)</span><br><span class="line">@Retention(RetentionPolicy.RUNTIME)</span><br><span class="line">@Documented</span><br><span class="line">@Inherited</span><br><span class="line">@SpringBootConfiguration</span><br><span class="line">@EnableAutoConfiguration</span><br><span class="line">@ComponentScan(excludeFilters = &#123;</span><br><span class="line">		@Filter(type = FilterType.CUSTOM, classes = TypeExcludeFilter.class),</span><br><span class="line">		@Filter(type = FilterType.CUSTOM,</span><br><span class="line">				classes = AutoConfigurationExcludeFilter.class) &#125;)</span><br><span class="line">public @interface SpringBootApplication &#123;</span><br></pre></td></tr></table></figure></p>
+<h2 id="TestConfiguration-应用实例"><a href="#TestConfiguration-应用实例" class="headerlink" title="@TestConfiguration 应用实例"></a>@TestConfiguration 应用实例</h2><ol>
+<li><p>编写TestProps类:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@TestConfiguration</span><br><span class="line">public class TestProps &#123;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    public Foo foo() &#123;</span><br><span class="line">        return new Foo(&quot;from testProps&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Foo.java</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">@Data</span><br><span class="line">@AllArgsConstructor</span><br><span class="line">@NoArgsConstructor</span><br><span class="line">public class Foo &#123;</span><br><span class="line">    private String name;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>编写测试类</p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">@RunWith(SpringRunner.class)</span><br><span class="line">@SpringBootTest(classes = &#123;Application.class&#125;)// 指定启动类</span><br><span class="line">@Import(Config.class)</span><br><span class="line">@Slf4j</span><br><span class="line">public class SimpleTest &#123;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private Foo foo;</span><br><span class="line"></span><br><span class="line">    @Test</span><br><span class="line">    public void testConfiguration() &#123;</span><br><span class="line">        log.info(&quot;TestConfiguration1&quot;);</span><br><span class="line">        Assert.assertEquals(foo.getName(), &quot;from testProps&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行通过,testConfiguration，测试通过。<br>当然上面Config中的注解@TestConfiguration可以换成@Configuration效果也是一样的，@TestConfiguration是专门用于测试的。</p>
+<h2 id="使用mock方式对controller进行单元测试（无需运行web服务）"><a href="#使用mock方式对controller进行单元测试（无需运行web服务）" class="headerlink" title="使用mock方式对controller进行单元测试（无需运行web服务）"></a>使用mock方式对controller进行单元测试（无需运行web服务）</h2><p>默认情况下，使用@SpringBootTest不会真正启动web服务，当我们测试controller时，spring测试提供了MockMvc供我们方便的测试controller，就像从浏览器发起请求一样。<br>在HelloController中有这么一个方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@GetMapping(&quot;/getHello&quot;)</span><br><span class="line">public String getHello ()&#123;</span><br><span class="line">    logger.info(&quot;name = &#123;&#125;&quot;, appProps.toString());</span><br><span class="line">    return &quot;Hello World&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>需要启动浏览器运行 <code>localhost:8080/getHello</code></p>
+<p>关闭tomcat服务，我们看如何进行单元测试。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">@RunWith(SpringRunner.class)</span><br><span class="line">@SpringBootTest(classes = &#123;BasicserviceApplication.class&#125;)</span><br><span class="line">@AutoConfigureMockMvc</span><br><span class="line">public class MockMvcSimpleTest &#123;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private MockMvc mockMvc;</span><br><span class="line"></span><br><span class="line">    @Test</span><br><span class="line">    public void simpleTest1() throws Exception &#123;</span><br><span class="line">        this.mockMvc</span><br><span class="line">                .perform(get(&quot;/getHello&quot;))</span><br><span class="line">                .andExpect(status().isOk())</span><br><span class="line">                .andExpect(content().string(&quot;Hello World&quot;))</span><br><span class="line">                .andDo(MockMvcResultHandlers.print());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="对随机端口进行单元测试"><a href="#对随机端口进行单元测试" class="headerlink" title="对随机端口进行单元测试"></a>对随机端口进行单元测试</h3><p>如果您需要启动运行web服务，我们建议您使用随机端口。 如果您使用的是@SpringBootTest（webEnvironment = WebEnvironment.RANDOM_PORT），则可以随机进行测试运行。</p>
+<h4 id="打开随机端口"><a href="#打开随机端口" class="headerlink" title="打开随机端口"></a>打开随机端口</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">server:</span><br><span class="line">  port: 0</span><br></pre></td></tr></table></figure>
+<p>或者</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">server:</span><br><span class="line">  port: $&#123;random.int[10000,65535]&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="编写测试类"><a href="#编写测试类" class="headerlink" title="编写测试类"></a>编写测试类</h4><p>这里允许自动注入TestRestTemplate:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">@RunWith(SpringRunner.class)</span><br><span class="line">// 使用随机端口</span><br><span class="line">@SpringBootTest(classes = BasicserviceApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)</span><br><span class="line">public class RandomPortTestRestTemplateSimpleTests &#123;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private TestRestTemplate restTemplate;</span><br><span class="line"></span><br><span class="line">    @Test</span><br><span class="line">    public void simpleTest()&#123;</span><br><span class="line">        String body = this.restTemplate.getForObject(&quot;/getHello&quot;, String.class);</span><br><span class="line">        Assertions.assertThat(body).isEqualTo(&quot;Hello World&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="使用mock方式对controller进行单元测试（需运行web服务且-使用webflux）"><a href="#使用mock方式对controller进行单元测试（需运行web服务且-使用webflux）" class="headerlink" title="使用mock方式对controller进行单元测试（需运行web服务且 使用webflux）"></a>使用mock方式对controller进行单元测试（需运行web服务且 使用webflux）</h2><p>具体的webflux相关的内容后续会讲。这里只需要知道这个springboot提供的是基于reactor的响应式编程（异步非阻塞）架构就行了。而我们之前使用的基于Tomcat的servlet3.1之前的springmvc是同步阻塞的。</p>
+<p>要想使用webflux，需要更换<code>spring-boot-starter-web</code>为<code>spring-boot-starter-webflux</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-boot-starter-webflux&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="编写测试类-1"><a href="#编写测试类-1" class="headerlink" title="编写测试类"></a>编写测试类</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">@RunWith(SpringRunner.class)</span><br><span class="line">// 使用随机端口</span><br><span class="line">@SpringBootTest(classes = BasicserviceApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)</span><br><span class="line">public class RandomPortTestRestTemplateSimpleTests &#123;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private WebTestClient webTestClient;</span><br><span class="line"></span><br><span class="line">    @Test</span><br><span class="line">    public void simpleTest1()&#123;</span><br><span class="line">        String responseBody = this.webTestClient.get().uri(&quot;/getHello&quot;).exchange().expectStatus().isOk()</span><br><span class="line">                .expectBody(String.class).returnResult().getResponseBody();</span><br><span class="line">        System.out.println(responseBody);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="MockBean-对bean进行mock测试"><a href="#MockBean-对bean进行mock测试" class="headerlink" title="@MockBean 对bean进行mock测试"></a>@MockBean 对bean进行mock测试</h2><p>在实际项目中，有一些bean可能会调用第三方，依赖外部组件或项目。但是我们单元测试不需要真正调用。那么我们可以使用@MockBean进行mock结果。<br>假设HelloService中有调用外部服务的方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public interface HelloService &#123;</span><br><span class="line">    //模拟远程调用，或者其他服务调用</span><br><span class="line">    String getRemoteVal();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">@Component</span><br><span class="line">@Slf4j</span><br><span class="line">public class HelloServiceImpl implements HelloService &#123;</span><br><span class="line"></span><br><span class="line">    public String getRemoteVal()&#123;</span><br><span class="line">        log.info(&quot;真正发起外部请求&quot;);</span><br><span class="line">        return &quot;remote val&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="编写单元测试代码"><a href="#编写单元测试代码" class="headerlink" title="编写单元测试代码"></a>编写单元测试代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">@RunWith(SpringRunner.class)</span><br><span class="line">@SpringBootTest(classes = &#123;BasicserviceApplication.class&#125;)</span><br><span class="line">public class MockBeanTest &#123;</span><br><span class="line"></span><br><span class="line">    @MockBean //这里使用SpyBean是一样的效果</span><br><span class="line">    private HelloService helloService;</span><br><span class="line"></span><br><span class="line">    @Test</span><br><span class="line">    public void simpleTest()&#123;</span><br><span class="line">        //这句的意思是当调用helloService的getRemoteVal方法时，返回mock的结果：&quot;远程调用结果&quot;</span><br><span class="line">        BDDMockito.given(this.helloService.getRemoteVal()).willReturn(&quot;远程调用结果&quot;);</span><br><span class="line"></span><br><span class="line">        // 进行调用测试</span><br><span class="line">        String remoteVal = helloService.getRemoteVal();</span><br><span class="line">        Assertions.assertThat(remoteVal).isEqualTo(&quot;远程调用结果&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>执行单元测试，可以发现并没有真正发起请求。</p>
+<h2 id="测试json-JsonTest"><a href="#测试json-JsonTest" class="headerlink" title="测试json @JsonTest"></a>测试json @JsonTest</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">@RunWith(SpringRunner.class)</span><br><span class="line">// 这里不能使用SpringBootTest</span><br><span class="line">@ContextConfiguration(classes = &#123;BasicserviceApplication.class&#125;)</span><br><span class="line">@JsonTest</span><br><span class="line">public class JsonSimpleTest &#123;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private JacksonTester&lt;Dog&gt; json;</span><br><span class="line"></span><br><span class="line">    @Test</span><br><span class="line">    public void testSerialize() throws IOException &#123;</span><br><span class="line">        Dog dogOne = new Dog(&quot;dogOne&quot;, 1.0);</span><br><span class="line">        JsonContentAssert jsonContentAssert = Assertions.assertThat(this.json.write(dogOne));</span><br><span class="line"></span><br><span class="line">        jsonContentAssert.hasJsonPathStringValue(&quot;@.name&quot;);</span><br><span class="line">        jsonContentAssert.extractingJsonPathStringValue(&quot;@.name&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Test</span><br><span class="line">    public void testDeserialize() throws IOException &#123;</span><br><span class="line">        String content = &quot;&#123;\&quot;name\&quot;:\&quot;2\&quot;,\&quot;weight\&quot;:\&quot;11.0\&quot;&#125;&quot;;</span><br><span class="line">        Assertions.assertThat(this.json.parse(content)).isEqualTo(new Dog(&quot;2&quot;,11.0));</span><br><span class="line">        Assertions.assertThat(this.json.parseObject(content).getName()).isEqualTo(&quot;2&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="有时候我们会自定义序列化风格，这里对-JsonComponent进行测试："><a href="#有时候我们会自定义序列化风格，这里对-JsonComponent进行测试：" class="headerlink" title="有时候我们会自定义序列化风格，这里对@JsonComponent进行测试："></a>有时候我们会自定义序列化风格，这里对@JsonComponent进行测试：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">@JsonComponent</span><br><span class="line">public class FooJsonComponent &#123;</span><br><span class="line"></span><br><span class="line">    public static class Serializer extends JsonSerializer&lt;Dog&gt; &#123;</span><br><span class="line"></span><br><span class="line">        @Override</span><br><span class="line">        public void serialize(Dog value, JsonGenerator gen, SerializerProvider seri) throws IOException &#123;</span><br><span class="line">            gen.writeString(&quot;name=&quot; + value.getName() + &quot;,weight=&quot; + value.getWeight());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static class Deserializer extends JsonDeserializer&lt;Dog&gt; &#123;</span><br><span class="line"></span><br><span class="line">        @Override</span><br><span class="line">        public Dog deserialize(JsonParser p, DeserializationContext ctxt) throws IOException, JsonProcessingException &#123;</span><br><span class="line">            JsonToken currentToken = p.getCurrentToken();</span><br><span class="line">            if (currentToken == JsonToken.VALUE_STRING) &#123;</span><br><span class="line">                String trim = p.getText().trim();</span><br><span class="line"></span><br><span class="line">                String[] split = trim.split(&quot;,&quot;);</span><br><span class="line">                Dog dog = new Dog();</span><br><span class="line">                dog.setName(split[0].split(&quot;=&quot;)[1]);</span><br><span class="line">                dog.setWeight(Double.parseDouble(split[1].split(&quot;=&quot;)[1]));</span><br><span class="line">                return dog;</span><br><span class="line">            &#125;</span><br><span class="line">            return (Dog) ctxt.handleUnexpectedToken(handledType(), p);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="编写测试类-2"><a href="#编写测试类-2" class="headerlink" title="编写测试类"></a>编写测试类</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">@RunWith(SpringRunner.class)</span><br><span class="line">@ContextConfiguration(classes = &#123;JsonComponentJacksonTest.class, FooJsonComponent.class&#125;)</span><br><span class="line">@JsonTest</span><br><span class="line">public class JsonComponentJacksonTest extends AbstractTestNGSpringContextTests &#123;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private JacksonTester&lt;Dog&gt; json;</span><br><span class="line"></span><br><span class="line">    @Test</span><br><span class="line">    public void testSerialize() throws IOException &#123;</span><br><span class="line">        Dog aaa = new Dog(&quot;aaa&quot;, 12.0);</span><br><span class="line">        assertThat(this.json.write(aaa).getJson()).isEqualTo(&quot;\&quot;name=aaa,weight=12.0\&quot;&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Test</span><br><span class="line">    public void testDeserialize() throws IOException &#123;</span><br><span class="line">        String content = &quot;\&quot;name=aaa,weight=12.0\&quot;&quot;;</span><br><span class="line">        Dog dog = this.json.parseObject(content);</span><br><span class="line">        assertThat(dog).isEqualTo(new Dog(&quot;aaa&quot;,12.0));</span><br><span class="line">        assertThat(dog.getName()).isEqualTo(&quot;aaa&quot;);</span><br><span class="line">        assertThat(dog.getWeight()).isEqualTo(12.0);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="TestPropertySource-对属性配置进行mock"><a href="#TestPropertySource-对属性配置进行mock" class="headerlink" title="@TestPropertySource 对属性配置进行mock"></a>@TestPropertySource 对属性配置进行mock</h2><p>使用springboot我们通常会将配置设置在application.yml中，但是在测试的时候，可能会对某些配置的值进行修改，接下来我们使用@TestPropertySource来实现这个功能。</p>
+<h3 id="使用spring提供的-PropertySource"><a href="#使用spring提供的-PropertySource" class="headerlink" title="使用spring提供的@PropertySource"></a>使用spring提供的@PropertySource</h3><p>springboot提供的<code>@ConfigurationProperties</code>可以加载<code>application.yml</code>中的配置，如果你的配置放到其他目录或者叫其他名称，可以使用<code>@PropertySource</code>来进行加载。</p>
+<p>我们先在resource下编写property-source.yml<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name:ghost</span><br></pre></td></tr></table></figure></p>
+<p>@PropertySource可以支持properties和yml两种格式。<br>编写类PropertySourceConfig.java来加载配置文件中的内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">@Configuration</span><br><span class="line">@PropertySource(&quot;classpath:property-source.yml&quot;)</span><br><span class="line">public class PropertySourceConfig &#123;</span><br><span class="line"></span><br><span class="line">    private String name;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>编写测试类</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">@RunWith(SpringRunner.class)</span><br><span class="line">@SpringBootTest</span><br><span class="line">@Slf4j</span><br><span class="line">@ContextConfiguration(classes = PropertySourceConfig.class)</span><br><span class="line">@TestPropertySource( // 对属性进行设置</span><br><span class="line">        properties = &#123;&quot;name=123&quot;, &quot;age=11&quot;&#125;</span><br><span class="line">)</span><br><span class="line">public class PropertySourceSimpleTest implements EnvironmentAware &#123;</span><br><span class="line"></span><br><span class="line">    private Environment environment;</span><br><span class="line"></span><br><span class="line">    @Test</span><br><span class="line">    public void testOne()&#123;</span><br><span class="line">        Assert.assertEquals(environment.getProperty(&quot;name&quot;), &quot;123&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void setEnvironment(Environment environment) &#123;</span><br><span class="line">        this.environment = environment;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>测试通过。大家可以将<code>@TestPropertySource</code>注解去掉来观察输出结果。</p>
+<h2 id="对springboot提供的类型安全的属性配置进行mock"><a href="#对springboot提供的类型安全的属性配置进行mock" class="headerlink" title="对springboot提供的类型安全的属性配置进行mock"></a>对springboot提供的类型安全的属性配置进行mock</h2><p>前面已经讲过如何进行<strong>类型安全的属性配置</strong>。这种情况依然可以使用@TestPropertySource对属性进行mock:</p>
+<p>编写测试类:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">@RunWith(SpringRunner.class)</span><br><span class="line">@SpringBootTest(classes = &#123;BasicserviceApplication.class&#125;)</span><br><span class="line">@Slf4j</span><br><span class="line">@TestPropertySource(</span><br><span class="line">        properties = &#123;&quot;basic-service.name=dudu&quot;, &quot;basic-service.age=12&quot;&#125;</span><br><span class="line">)</span><br><span class="line">public class PropertySourceTest &#123;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private AppProps appProps;</span><br><span class="line"></span><br><span class="line">    @Test</span><br><span class="line">    public void testOne() &#123;</span><br><span class="line">        log.info(appProps.getName());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>测试通过。大家可以将@TestPropertySource注解去掉来观察输出结果。</p>
+<h2 id="为单元测试单独提供测试配置"><a href="#为单元测试单独提供测试配置" class="headerlink" title="为单元测试单独提供测试配置"></a>为单元测试单独提供测试配置</h2><p>在src/test/resources目录下创建一个单元测试专用的属性配置文件。就可以在@TestPropertySource指定加载这个配置即可。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">@RunWith(SpringRunner.class)</span><br><span class="line">@SpringBootTest</span><br><span class="line">@Slf4j</span><br><span class="line">@ContextConfiguration(classes = PropertySourceConfig.class) // 加载属性配置</span><br><span class="line">@TestPropertySource(</span><br><span class="line">        locations = &quot;classpath:test-property-source.yml&quot;</span><br><span class="line">)</span><br><span class="line">public class PropertySourceSimpleTestBetter implements EnvironmentAware &#123;</span><br><span class="line"></span><br><span class="line">    private Environment environment;</span><br><span class="line"></span><br><span class="line">    @Test</span><br><span class="line">    public void testOne()&#123;</span><br><span class="line">        Assert.assertEquals(environment.getProperty(&quot;name&quot;), &quot;ghost2&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void setEnvironment(Environment environment) &#123;</span><br><span class="line">        this.environment = environment;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="对AOP进行测试"><a href="#对AOP进行测试" class="headerlink" title="对AOP进行测试"></a>对AOP进行测试</h2><h3 id="引入AOP依赖"><a href="#引入AOP依赖" class="headerlink" title="引入AOP依赖"></a>引入AOP依赖</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-boot-starter-aop&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="对AOP进行测试-1"><a href="#对AOP进行测试-1" class="headerlink" title="对AOP进行测试"></a>对AOP进行测试</h3><p>我们这里对HelloService使用Aspect进行AOP代理</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">@Component</span><br><span class="line">@Aspect</span><br><span class="line">public class HelloAspect &#123;</span><br><span class="line"></span><br><span class="line">    @Pointcut(&quot;execution(* com.misaniy.basicservice.service.HelloService.getRemoteVal()))&quot;)</span><br><span class="line">    public void pointCut()&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Around(&quot;pointCut()&quot;)</span><br><span class="line">    public String changeGetRemoteVal(ProceedingJoinPoint pjp) &#123;</span><br><span class="line">        return &quot;aopResult&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>使用springboot进行配置，启用aop</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@Configuration</span><br><span class="line">@EnableAspectJAutoProxy(proxyTargetClass = true) // 启用AOP</span><br><span class="line">@ComponentScan(&quot;com.misaniy.basicservice.service&quot;)</span><br><span class="line">public class AopConfig &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>我们对MockMvcExampleTests添加一个测试方法，验证一下结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@Test</span><br><span class="line">public void simpleTest2() throws Exception &#123;</span><br><span class="line">    this.mockMvc</span><br><span class="line">            .perform(get(&quot;/getRemoteVal&quot;))</span><br><span class="line">            .andExpect(status().isOk())</span><br><span class="line">            .andExpect(content().string(&quot;aopResult&quot;))</span><br><span class="line">            .andDo(MockMvcResultHandlers.print());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="另一种AOP测试"><a href="#另一种AOP测试" class="headerlink" title="另一种AOP测试"></a>另一种AOP测试</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">@RunWith(SpringRunner.class)</span><br><span class="line">@SpringBootTest(classes = &#123;BasicserviceApplication.class&#125;)</span><br><span class="line">@TestExecutionListeners(listeners = MockitoTestExecutionListener.class)</span><br><span class="line">@Slf4j</span><br><span class="line">public class SpringBootAopTest extends AbstractTestNGSpringContextTests &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    @SpyBean</span><br><span class="line">    private HelloAspect helloAspect;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private HelloService helloService;</span><br><span class="line"></span><br><span class="line">    @Test</span><br><span class="line">    public void aopSimpleTest()&#123;</span><br><span class="line">        // 判断helloService对象是不是HelloServiceImpl</span><br><span class="line">        Assert.assertNotEquals(helloService.getClass(), HelloServiceImpl.class);</span><br><span class="line"></span><br><span class="line">        // 接下来通过AopUtils、AopProxyUtils、AopTestUtils来判断helloService是否是代理的</span><br><span class="line">        Assert.assertTrue(AopUtils.isAopProxy(helloService));</span><br><span class="line">        Assert.assertTrue(AopUtils.isCglibProxy(helloService));</span><br><span class="line"></span><br><span class="line">        Assert.assertEquals(AopProxyUtils.ultimateTargetClass(helloService), HelloServiceImpl.class);</span><br><span class="line"></span><br><span class="line">        Assert.assertEquals(AopTestUtils.getTargetObject(helloService).getClass(), HelloServiceImpl.class);</span><br><span class="line">        Assert.assertEquals(AopTestUtils.getUltimateTargetObject(helloService).getClass(), HelloServiceImpl.class);</span><br><span class="line"></span><br><span class="line">        /**</span><br><span class="line">         * 但是证明HelloServiceImpl Bean被代理并不意味着HelloAspect生效了</span><br><span class="line">         * 那么我们还需要验证HelloServiceImpl.getRemoveVal的行为。</span><br><span class="line">         * 这里调用两次</span><br><span class="line">         */</span><br><span class="line">        Assert.assertEquals(helloService.getRemoteVal(), &quot;aopResult&quot;);</span><br><span class="line">        Assert.assertEquals(helloService.getRemoteVal(), &quot;aopResult&quot;);</span><br><span class="line"></span><br><span class="line">        /**</span><br><span class="line">         * 通过MockitoTestExecutionListener来监听是否调用了两次helloService.getRemoteVal()</span><br><span class="line">         * 注意这一行代码测试的是HelloAspect的行为，而不是HelloService的行为</span><br><span class="line">         */</span><br><span class="line">        verify(helloAspect, times(2)).changeGetRemoteVal(any());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2019/04/18/MySQL/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2019/04/15/springBoot/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="WarmCute's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        youremail@email.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="#" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2019/04/">四月 2019<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/10/">十月 2017<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/09/">九月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/04/">四月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">三月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">一月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">十一月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/10/">十月 2016<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">九月 2016<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">八月 2016<span class="sidebar_archives-count">1</span></a>
+            </li></ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material" class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/twitter" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/facebook" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+        <a href="https://www.google.com/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-gplus">
+                <span class="visuallyhidden">Google Plus</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+
+    <!-- V2EX -->
+    
+
+    <!-- Segmentfault -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;WarmCute's Blog
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 0000;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
